@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f1e9">
+  <title>Ftesë Dasme</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="phone-frame">
+    <main class="invitation" id="invitation">
+      <div class="ambient-layer" id="ambientLayer" aria-hidden="true"></div>
+      <section class="intro-screen" id="introScreen" role="button" tabindex="0" aria-label="Hape ftesën">
+        <div class="opening-video-layer" id="openingVideoLayer" aria-hidden="false">
+          <video id="openingVideo" muted playsinline preload="auto"></video>
+        </div>
+        <p class="tap-hint">Prek ekranin për ta hapur</p>
+      </section>
+
+      <audio id="backgroundMusic" preload="auto" loop></audio>
+      <button class="music-toggle is-hidden" id="musicToggle" type="button" aria-label="Muzika ndezur" aria-pressed="true">
+        <span class="music-disc" aria-hidden="true"></span>
+        <span class="equalizer" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </span>
+        <span class="music-state">Mute</span>
+      </button>
+
+      <section class="hero section-reveal" id="heroSection">
+        <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="hero-image" id="heroImage"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-card">
+          <p class="eyebrow">Dasma e</p>
+          <h2 class="hero-names" data-field="coupleNames"></h2>
+          <div class="gold-divider" aria-hidden="true"></div>
+          <p class="hero-date" data-field="displayDate"></p>
+        </div>
+      </section>
+
+      <section class="section countdown-section section-reveal" aria-label="Numërimi mbrapsht">
+        <p class="eyebrow">Edhe pak deri në ditën tonë</p>
+        <h2>Numërimi Mbrapsht</h2>
+        <p class="passed-message" id="passedMessage" hidden>Dita e dasmës ka ardhur</p>
+        <div class="countdown-grid" id="countdown">
+          <div class="countdown-card">
+            <strong id="days">00</strong>
+            <span>Ditë</span>
+          </div>
+          <div class="countdown-card">
+            <strong id="hours">00</strong>
+            <span>Orë</span>
+          </div>
+          <div class="countdown-card">
+            <strong id="minutes">00</strong>
+            <span>Minuta</span>
+          </div>
+          <div class="countdown-card">
+            <strong id="seconds">00</strong>
+            <span>Sekonda</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-reveal" aria-label="Detajet e dasmës">
+        <p class="eyebrow">Ju mirëpresim</p>
+        <h2>Detajet e Dasmës</h2>
+        <div class="details-list stagger-list">
+          <article class="glass-card">
+            <span>Data</span>
+            <strong data-field="displayDate"></strong>
+          </article>
+          <article class="glass-card">
+            <span>Ora</span>
+            <strong data-field="displayTime"></strong>
+          </article>
+          <article class="glass-card">
+            <span>Vendi</span>
+            <strong data-field="locationName"></strong>
+          </article>
+          <article class="glass-card">
+            <span>Adresa</span>
+            <strong data-field="address"></strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section family-section section-reveal" aria-label="Familjet">
+        <p class="eyebrow">Me dashuri</p>
+        <h2>Familjet</h2>
+        <p class="family-text" data-field="familyText"></p>
+        <div class="gold-divider compact" aria-hidden="true"></div>
+        <div class="family-names">
+          <div class="glass-card">
+            <span>Nusja</span>
+            <strong data-field="brideFamily"></strong>
+          </div>
+          <div class="glass-card">
+            <span>Dhëndri</span>
+            <strong data-field="groomFamily"></strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section section-reveal" aria-label="Galeria">
+        <p class="eyebrow">Momentet tona</p>
+        <h2>Galeria</h2>
+        <div class="gallery-track" id="galleryTrack"></div>
+      </section>
+
+      <section class="section map-section section-reveal" aria-label="Lokacioni">
+        <div class="glass-card map-card">
+          <span class="pin-icon" aria-hidden="true"></span>
+          <p class="eyebrow">Na gjeni këtu</p>
+          <h2>Lokacioni</h2>
+          <p data-field="locationName"></p>
+          <p class="muted" data-field="address"></p>
+          <a class="primary-button" id="mapButton" href="#" target="_blank" rel="noopener">Hape Lokacionin</a>
+        </div>
+      </section>
+
+      <section class="section dress-section section-reveal" aria-label="Kodi i veshjes">
+        <div class="glass-card minimal-card">
+          <p class="eyebrow">Kodi i veshjes</p>
+          <h2>Veshja</h2>
+          <p class="large-detail" data-field="dressCode"></p>
+        </div>
+      </section>
+
+      <section class="section gift-section section-reveal" id="giftSection" aria-label="Informacione për dhurata">
+        <div class="glass-card minimal-card">
+          <p class="eyebrow">Me respekt</p>
+          <h2>Informacione për Dhurata</h2>
+          <p class="gift-info" id="giftInfo"></p>
+        </div>
+      </section>
+
+      <section class="section rsvp-section section-reveal" aria-label="Konfirmimi i pjesëmarrjes">
+        <p class="eyebrow">Përgjigjja juaj</p>
+        <h2>Konfirmo Pjesëmarrjen</h2>
+        <div class="button-stack">
+          <button class="primary-button" id="rsvpYes" type="button">Po, do të marr pjesë</button>
+          <button class="secondary-button" id="rsvpNo" type="button">Jo, nuk mund të vij</button>
+        </div>
+      </section>
+
+      <section class="section contact-section section-reveal" aria-label="Kontakti">
+        <p class="eyebrow">Për çdo pyetje</p>
+        <h2>Kontakt</h2>
+        <p class="studio-line" data-field="studioName"></p>
+        <p class="large-detail" data-field="contactPhone"></p>
+        <a class="secondary-button" id="contactButton" href="#">Kontakto</a>
+      </section>
+
+      <footer class="footer section-reveal">
+        <p>Ftesë digjitale e krijuar me kujdes</p>
+        <span data-field="studioName"></span>
+        <a class="powered-link" id="poweredLink" href="#" target="_blank" rel="noopener noreferrer">
+          Powered by <strong data-field="poweredByName"></strong>
+        </a>
+      </footer>
+    </main>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Mbylle">×</button>
+    <img id="lightboxImage" alt="Foto nga galeria">
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
