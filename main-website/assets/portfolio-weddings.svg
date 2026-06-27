@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-label="Wedding photography placeholder">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fbf3d5"/><stop offset="0.55" stop-color="#d6a99d"/><stop offset="1" stop-color="#211a1c"/></linearGradient></defs>
+  <rect width="900" height="1100" fill="url(#g)"/>
+  <circle cx="655" cy="270" r="190" fill="#fffdf8" opacity="0.22"/>
+  <path d="M140 830 C260 610 340 560 450 420 C575 585 650 640 770 830 Z" fill="#fffdf8" opacity="0.62"/>
+  <text x="80" y="100" fill="#fffdf8" font-family="Georgia,serif" font-size="72" font-weight="700">Weddings</text>
+  <text x="84" y="180" fill="#fffdf8" opacity="0.8" font-family="Arial,sans-serif" font-size="28" letter-spacing="8">STUDIO ART</text>
+</svg>

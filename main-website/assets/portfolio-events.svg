@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-label="Event photography placeholder">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#9cafaa"/><stop offset="0.6" stop-color="#d6dac8"/><stop offset="1" stop-color="#fbf3d5"/></linearGradient></defs>
+  <rect width="900" height="1100" fill="url(#g)"/>
+  <g fill="#fffdf8" opacity="0.34"><circle cx="210" cy="250" r="75"/><circle cx="705" cy="370" r="120"/><circle cx="460" cy="760" r="210"/></g>
+  <path d="M130 810 H770" stroke="#211a1c" stroke-opacity="0.22" stroke-width="24" stroke-linecap="round"/>
+  <text x="80" y="100" fill="#211a1c" font-family="Georgia,serif" font-size="74" font-weight="700">Events</text>
+  <text x="84" y="180" fill="#211a1c" opacity="0.64" font-family="Arial,sans-serif" font-size="28" letter-spacing="8">PHOTO &amp; VIDEO</text>
+</svg>
